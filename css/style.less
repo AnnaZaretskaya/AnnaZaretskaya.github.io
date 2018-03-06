@@ -1,0 +1,192 @@
+@color: rgba(171, 0, 1, 1);
+
+.loaderArea {
+    /*это если его прелоадером делать*/
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+  }
+.line {
+	top: 50%;
+   left: 50%;
+	position: absolute;
+	background-color:  @color;
+	width: 2px;
+	height: 100px;
+	transform: translateY(100px);
+	-o-transform:translateY(100px);
+	-ms-transform:translateY(100px);
+	-webkit-transform:translateY(100px);
+	-moz-transform:translateY(100px);
+	animation: rotate 6s linear infinite;
+}
+/*зато сама*/
+.generate-transform(@i: 1) when (@i =< 24) {
+.loader div:nth-child(@{i}) {
+ transform:translateY(100px) rotate(15*(-1+(@i))*1deg);
+	transform-origin: 50% 100%;
+	-o-transform:translateY(100px) rotate(15*(-1+(@i))*1deg);
+	-ms-transform:translateY(100px) rotate(15*(-1+(@i))*1deg);
+	-webkit-transform:translateY(100px) rotate(15*(-1+(@i))*1deg);
+	-moz-transform:translateY(100px) rotate(15*(-1+(@i))*1deg);
+  }
+  .generate-transform(@i + 1);
+}
+.generate-transform();
+
+
+
+@keyframes rotate {
+	0%{
+		transform: rotate(0deg) ;
+		transform-origin: 50% 25%;
+	}
+	100%{
+		transform: rotate(360deg) ;
+		transform-origin: 50% 25%;
+	}
+}
+
+header{
+width: 100%;
+height: 834px;
+background-image: url(../img/flower.png);
+background-position: center;
+background-size: 100% 834px;
+background-repeat: no-repeat;
+margin: 0;
+padding: 0;
+background-size: cover;
+}
+.whiteline{
+background-color: rgba(255,255,255, 0.5);
+width: 100%;
+height: 78px;
+}
+.to-right{
+	float: right;
+}
+header a {
+	color: rgba(69,69,69, 0.75);
+font-family: "Segoe UI", sans-serif;
+font-weight: normal;
+line-height: 30px;
+font-size: 17px;
+text-transform: none;
+	}
+header h1{
+color: white;
+font-family: "Myriad Pro", sans-serif;
+text-transform: uppercase;
+font-weight: bold;	
+line-height: 70px;
+font-size: 70px;
+margin: 30% auto 0 auto;
+
+}
+header p{
+color: white;
+font-family: "Myriad Pro", sans-serif;
+font-weight: normal;
+line-height: 30px;
+font-size: 24px;
+text-transform: none;
+}
+.secondBlock {
+height: 470px;	
+box-shadow: 0 3px 30px -9px rgba(0,0,0,0.3);
+}
+.secondBlock h1	{
+		color: rgba(69,69,69, 0.75);
+font-family: "Segoe UI", sans-serif;
+font-weight: normal;
+font-size: 35px;
+text-transform: none;
+margin: 10% auto 1% auto;
+}
+.secondBlock .text1{
+color: rgba(69,69,69, 0.75);
+font-family: "Myriad Pro", sans-serif;
+font-weight: normal;
+line-height: 30px;
+font-size: 17px;
+text-transform: none;
+text-align: center;
+}	
+.secondBlock .item3 span{
+text-align: center;
+vertical-align: middle;
+color: white;
+font-family: "Myriad Pro", sans-serif;
+font-weight: normal;
+line-height: 17px;
+font-size: 12px;
+text-transform: none;
+
+
+}
+.item1	{
+background-color: rgba(79,185,244, 1);
+width: 179px;
+height: 179px;
+background-image: url(../img/tikets.png);
+background-repeat: no-repeat;
+background-position: center;
+}
+.item2	{
+background-color: rgba(111,193,37, 1);
+width: 179px;
+height: 179px;
+background-image: url(../img/camera.png);
+background-repeat: no-repeat;
+background-position: center;
+}
+.item3	{
+display: flex;
+align-items: center;
+background-color: rgba(255,86,73, 1);
+width: 179px;
+height: 179px;
+background-image: url(../img/beer.png);
+background-repeat: no-repeat;
+background-position: center;
+padding: 25% auto 25% auto;
+}
+.item4	{
+background-color: rgba(228,143,35, 1);
+width: 179px;
+height: 179px;
+background-image: url(../img/ipad.png);
+background-repeat: no-repeat;
+background-position: center;
+}	
+.thirdBlock {
+height: 674px;
+}
+
+.thirdBlock img{
+width: 30%;
+min-width: 70px;
+max-width: 199px;
+margin-bottom: 2%;
+margin-right: 20px;
+}
+footer {
+height: 264px;	
+background-color: 	rgba(40,40,40, 1);
+color: rgba(139,139,139, 1);
+font-family: "Myriad Pro", sans-serif;
+font-weight: normal;
+line-height: 22px;
+font-size: 15px;
+text-transform: none;
+padding: 2% 0 2% 0;
+}
+footer .list-group{
+list-style: none;
+}
+footer .social{
+padding: 10% 0 10% 0;
+	
+}
